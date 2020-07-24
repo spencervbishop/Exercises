@@ -1,0 +1,7 @@
+<div *ngIf = "!isLoggedIn">
+  <h1>User not Logged In</h1>
+  <p>Please Log in First</p>
+</div>
+<div *ngIf="isLoggedIn">
+  <p>User is: {{user.name}}</p>
+</div>

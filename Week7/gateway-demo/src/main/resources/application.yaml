@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: bookstore-edge-server
+
+#Zuul config with eureka
+zuul:
+  prefix: /api
+  routes:
+    books:
+      path: /books/** #/api/books/**
+      serviceId: book-service
+  endpoints:
+    routes:
+      enabled: true
+
+#Zuul config without eureka
+#zuul:
+#  prefix: /api
+#  routes:
+#    books:
+#      path: /books/**   #/api/books/**
+#      url: http://localhost:8081
+#  endpoints:
+#    routes:
+#      enabled: true
+
+
+
+eureka:
+  client:
+    healthcheck:
+    enabled: true
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1

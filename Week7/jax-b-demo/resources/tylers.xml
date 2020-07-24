@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:dealer xmlns:ns2="com.ex.dealerships">
+    <name>Tyler's</name>
+    <stock>
+        <car>
+            <make>Mazda</make>
+            <model>RX-7</model>
+            <mileage>0</mileage>
+            <year>1993</year>
+            <price>20000.0</price>
+        </car>
+        <car>
+            <make>Honda</make>
+            <model>Civic</model>
+            <mileage>260000</mileage>
+            <year>2003</year>
+            <price>3000.0</price>
+        </car>
+    </stock>
+</ns2:dealer>

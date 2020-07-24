@@ -1,0 +1,50 @@
+
+<head>
+	<title>DOM Manipulation</title>
+
+	<script type="es6.js">
+	
+	</script>
+
+</head>
+<body>
+	<div>
+		<div></div>
+		<div></div>
+		<ul id="list">
+			<li><a href="http://www.google.com">One</a></li>
+			<li id="remove-me"><a href="http://www.google.com">two</a></li>
+			<li><a href="http://www.google.com">THREE</a></li>
+		</ul>
+
+		<button>"click me"</button>		
+		<input id="username" type="text" placeholder="Your name">
+		<script>
+			// alert("hello world");
+			var list = document.querySelector("#list");
+			var item = document.querySelector("#remove-me");
+
+			//hand it the tag name:
+			var newItem = document.createElement('li'); 
+			newItem.id = "dont-remove-me";
+			newItem.innerText = "Brand new item."
+
+			setTimeout(()=>{
+				list.removeChild(item);
+				list.appendChild(newItem);
+			}, 5000);
+
+			document.querySelectorAll('button')[0].addEventListener('click', (evt)=>{alert("hello,world!");
+				})
+
+			document.queryselector("#username").addEventListener('keypress', (evt) =>{
+				let value = evt.target.value;
+				if(evt.keyCode == 13 && value){
+					alert(`Hello ${value}`);
+				}
+			})
+			
+		</script>
+
+	</div>
+</body>

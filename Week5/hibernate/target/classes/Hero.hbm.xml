@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.ex.bean.Hero"
+            table="HEROES">
+        <id name="id" type="int">
+            <column name="HERO_ID" />
+            <generator class="sequence"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="HERO_NAME" not-null="true" />
+        </property>
+        <property name="created" type="java.util.Date">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="alive" type="boolean">
+            <column name="IS_ALIVE"/>
+        </property>
+        <property name="hitPoints" type="double">
+            <column name="HERO_HP" />
+        </property>
+    </class>
+</hibernate-mapping>

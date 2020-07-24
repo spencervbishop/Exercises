@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--byName-->
+    <!--<bean id="main" class="com.ex.Main" autowire="byName"/>-->
+    <!--byName means that when this Main bean is loaded, it will seach through the bean id's below and see -->
+    <!--which bean id matches the property in the Main class, that would be "license"-->
+
+
+    <!--byType-->
+    <!--<bean id="main" class="com.ex.Main" autowire="byType"/>-->
+
+    <!--byConstructor-->
+    <bean id="main" class="com.ex.Main" autowire="constructor"/>
+    <!--looks for the name and then the type-->
+
+
+    <!--<bean id="license" class="com.ex.License">-->
+    <bean id="userLicense" class="com.ex.License">
+        <property name="name" value="August"/>
+        <property name="state" value="MD"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,14 @@
+<div id="toolbar">
+  <button (click)="deleteItems()">X</button>
+</div>
+<ul class="container list-container">
+  <!-- <li 
+  *ngFor = "let item of items" 
+  class="list-item"
+  (click) = "selectItem(item)"  
+  [ngClass]= "{'selected': isSelected(item)}">{{item.text}}</li> -->
+  <app-list-item
+  *ngFor = "let item of items"
+  [item]="item">
+</app-list-item>
+</ul>
